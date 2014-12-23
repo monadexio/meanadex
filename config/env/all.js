@@ -27,6 +27,24 @@ module.exports = {
     }
   },
 
+  dashboard: {
+    title: 'meanadex dashboard',
+    description: 'Meanadex is Monadex dressed up in the fancy cloak of MEAN stack',
+    keywords: 'tshirt, crowd sourcing, mean, lambda',
+    assets: {
+      lib: {
+        css: [],
+        js: []
+      },
+      js: [
+        'public/dashboard/config.js',
+        'public/dashboard/application.js'
+      ],
+      css: [],
+      tests: []
+    }
+  },
+
   // common: properties that all apps need (incl: main, dashboard, campaign, etc)
   common: {
     assets: {

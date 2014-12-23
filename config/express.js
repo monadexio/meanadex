@@ -42,6 +42,13 @@ module.exports = function(db) {
     jsFiles: config.getJavaScriptAssets('main'),
     cssFiles: config.getCSSAssets('main')
   };
+  app.locals.dashboard = {
+    title: config.dashboard.title,
+    description: config.dashboard.description,
+    keywords: config.dashboard.keywords,
+    jsFiles: config.getJavaScriptAssets('dashboard'),
+    cssFiles: config.getCSSAssets('dashboard')
+  };
   app.locals.facebookAppId = config.facebook.clientID;
   app.locals.html5shiv = config.html5shiv.replace('public/', '');
 
