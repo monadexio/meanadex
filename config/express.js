@@ -38,10 +38,10 @@ module.exports = function(db) {
   app.locals.main = {
     title: config.main.title,
     description: config.main.description,
-    keywords: config.main.keywords
+    keywords: config.main.keywords,
+    jsFiles: config.getJavaScriptAssets('main')
   };
   app.locals.facebookAppId = config.facebook.clientID;
-  app.locals.jsFiles = config.getJavaScriptAssets();
   app.locals.cssFiles = config.getCSSAssets();
   app.locals.html5shiv = config.html5shiv.replace('public/', '');
 

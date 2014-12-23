@@ -6,7 +6,18 @@ module.exports = {
   // properties for the the main meanadex app
   main: {
     title: 'meanadex - Development Environment',
-    description: 'Meanadex is Monadex dressed up in the fancy cloak of MEAN stack'
+    description: 'Meanadex is Monadex dressed up in the fancy cloak of MEAN stack',
+    assets: {
+      lib: {
+        css: [],
+        js: []
+      },
+      js: [
+        'public/main/config.js',
+        'public/main/application.js'
+      ],
+      tests: []
+    }
   },
 
   facebook: {

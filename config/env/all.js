@@ -12,7 +12,18 @@ module.exports = {
   main: {
     title: 'meanadex',
     description: 'Meanadex is Monadex dressed up in the fancy cloak of MEAN stack',
-    keywords: 'tshirt, crowd sourcing, mean, lambda'
+    keywords: 'tshirt, crowd sourcing, mean, lambda',
+    assets: {
+      lib: {
+        css: [],
+        js: []
+      },
+      js: [
+        'public/main/config.js',
+        'public/main/application.js'
+      ],
+      tests: []
+    }
   },
 
   // common: properties that all apps need (incl: main, dashboard, campaign, etc)
@@ -70,8 +81,6 @@ module.exports = {
         'public/modules/**/scss/*.scss'
       ],
       js: [
-        'public/config.js',
-        'public/application.js',
         'public/modules/*/*.js',
         'public/modules/*/*[!tests]*/*.js'
       ],
