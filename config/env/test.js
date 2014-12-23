@@ -5,9 +5,12 @@ var HOST = process.env.WERCKER_MONGODB_HOST || 'localhost';
 module.exports = {
   db: 'mongodb://' + HOST + '/meanadex-test',
   port: 3001,
-  app: {
+
+  // properties for the the main meanadex app
+  main: {
     title: 'meanadex - Test Environment'
   },
+
   facebook: {
     clientID: process.env.FACEBOOK_ID || 'APP_ID',
     clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
