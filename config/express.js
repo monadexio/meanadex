@@ -39,10 +39,10 @@ module.exports = function(db) {
     title: config.main.title,
     description: config.main.description,
     keywords: config.main.keywords,
-    jsFiles: config.getJavaScriptAssets('main')
+    jsFiles: config.getJavaScriptAssets('main'),
+    cssFiles: config.getCSSAssets('main')
   };
   app.locals.facebookAppId = config.facebook.clientID;
-  app.locals.cssFiles = config.getCSSAssets();
   app.locals.html5shiv = config.html5shiv.replace('public/', '');
 
   // Passing the request url to environment locals

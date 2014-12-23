@@ -16,6 +16,7 @@ module.exports = {
         'public/main/config.js',
         'public/main/application.js'
       ],
+      css: [],
       tests: []
     }
   },
