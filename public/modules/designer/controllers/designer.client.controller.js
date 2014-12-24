@@ -9,7 +9,7 @@ angular.module('designer').controller('DesignerController', [
 
     $scope.ensureEnoughData = function() {
       if(!allTshirts || (allTshirts.length === 0)) {
-        $location.path('admin/tshirts');
+        $location.path('/dashboard/#!/tshirts');
       }
     };
 

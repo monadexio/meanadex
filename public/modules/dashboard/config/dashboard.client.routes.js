@@ -30,32 +30,6 @@ angular.module('dashboard').config([
             controller: 'DashboardController'
           }
         }}).
-      state('dashboard.tshirts', {
-        url: '/tshirts',
-        views: {
-          'dashboardPanel': {
-            templateUrl: 'modules/tshirts/views/list-tshirts.client.view.html',
-            controller: 'TshirtsController'
-          }
-        }}).
-      state('dashboard.tshirtCreate', {
-        url: '/tshirts/create',
-        views: {
-          'dashboardPanel': {
-            templateUrl: 'modules/tshirts/views/create-tshirt.client.view.html',
-            controller: 'TshirtsController'
-          }
-        }
-      }).
-      state('dashboard.tshirtDetail', {
-        url: '/tshirts/:tshirtId',
-        views: {
-          'dashboardPanel': {
-            templateUrl: 'modules/tshirts/views/view-tshirt.client.view.html',
-            controller: 'TshirtsController'
-          }
-        }
-      }).
       state('dashboard.campaigns', {
         url: '/campaigns',
         views: {
