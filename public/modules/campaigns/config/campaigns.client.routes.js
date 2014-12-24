@@ -21,11 +21,6 @@ angular.module('campaigns').config([
       templateUrl: 'modules/campaigns/views/campaign-summary.client.view.html',
       controller: 'CampaignsSummaryController'
     }).
-    state('listCampaigns', {
-      url: '/campaigns',
-      templateUrl: 'modules/campaigns/views/list-campaigns.client.view.html',
-      controller: 'CampaignsController'
-    }).
     state('campaignNotFound', {
       url: '/campaign_not_found',
       templateUrl: 'modules/campaigns/views/campaign-not-found.client.view.html',

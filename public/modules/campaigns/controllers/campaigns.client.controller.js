@@ -44,15 +44,6 @@ angular.module('campaigns').controller('CampaignsController', [
       $scope.campaigns = Campaigns.query();
     };
 
-    $scope.findBetween = function(start, end) {
-      $scope.campaigns = Campaigns.query(
-        {
-          startDate: start,
-          endDate: end
-        }
-      );
-    };
-
     // Find existing Campaign for a particular user
     $scope.findOne = function() {
       $scope.campaign = Campaigns.get(
@@ -65,39 +56,6 @@ angular.module('campaigns').controller('CampaignsController', [
           $location.path('/campaign_not_found');
         }
       );
-    };
-
-    $scope.tableParams = DashboardUtils.newTableParams(
-      function($defer, params) {
-        var orderedData = params.filter() ?
-          $filter('filter')($scope.campaigns, params.filter()) :
-          $scope.campaigns;
-
-        params.total(orderedData.length);
-        $defer.resolve(orderedData);
-      }
-    );
-
-    // Find a list of Campaigns and load them into campaign table
-    $scope.loadAllCampaignsInTableData = function() {
-      $scope.campaigns = Campaigns.query(
-        function(data) {
-          $scope.tableParams.reload();
-        });
-    };
-
-    $scope.onRemove = function(campaign) {
-      $scope.remove(campaign);
-      $scope.tableParams.reload();
-    };
-
-    $scope.onSave = function(campaign) {
-      campaign.$edit = false;
-      $scope.update(campaign);
-    };
-
-    $scope.onEdit = function(campaign) {
-      campaign.$edit = true;
     };
 
     $scope.reserveCampaign = function(campaign) {

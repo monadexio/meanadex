@@ -30,15 +30,6 @@ angular.module('dashboard').config([
             controller: 'DashboardController'
           }
         }}).
-      state('dashboard.campaigns', {
-        url: '/campaigns',
-        views: {
-          'dashboardPanel': {
-            templateUrl: 'modules/campaigns/views/list-campaigns.client.view.html',
-            controller: 'CampaignsController'
-          }
-        }
-      }).
       state('dashboard.orders', {
         url: '/orders',
         views: {
