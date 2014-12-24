@@ -18,11 +18,23 @@ module.exports = {
         css: [],
         js: []
       },
+      css: [
+        'public/modules/**/css/*.css'
+      ],
+      less: [
+        'public/modules/**/less/*.less'
+      ],
+      sass: [
+        'public/modules/**/scss/*.scss'
+      ],
       js: [
         'public/main/config.js',
-        'public/main/application.js'
+        'public/main/application.js',
+        'public/main/modules/*/*.js',
+        'public/main/modules/*/*[!tests]*/*.js',
+        'public/modules/*/*.js',
+        'public/modules/*/*[!tests]*/*.js'
       ],
-      css: [],
       tests: []
     }
   },
@@ -36,11 +48,21 @@ module.exports = {
         css: [],
         js: []
       },
+      css: [
+        'public/dashboard/modules/**/css/*.css'
+      ],
+      less: [
+        'public/dashboard/modules/**/less/*.less'
+      ],
+      sass: [
+        'public/dashboard/modules/**/scss/*.scss'
+      ],
       js: [
         'public/dashboard/config.js',
-        'public/dashboard/application.js'
+        'public/dashboard/application.js',
+        'public/dashboard/modules/*/*.js',
+        'public/dashboard/modules/*/*[!tests]*/*.js'
       ],
-      css: [],
       tests: []
     }
   },
@@ -91,17 +113,12 @@ module.exports = {
         ]
       },
       css: [
-        'public/modules/**/css/*.css'
       ],
       less: [
-        'public/modules/**/less/*.less'
       ],
       sass: [
-        'public/modules/**/scss/*.scss'
       ],
       js: [
-        'public/modules/*/*.js',
-        'public/modules/*/*[!tests]*/*.js'
       ],
       tests: [
         'public/lib/angular-mocks/angular-mocks.js',
