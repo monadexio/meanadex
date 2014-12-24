@@ -3,7 +3,11 @@
 /**
  * Module dependencies.
  */
-exports.index = function(req, res) {
+exports.root = function(req, res) {
+  res.redirect('/main');
+};
+
+exports.main = function(req, res) {
   res.render('index', {
     user: req.user || null
   });
