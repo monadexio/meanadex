@@ -5,6 +5,6 @@ module.exports = function(app) {
   var core = require('../../app/controllers/core');
   var users = require('../../app/controllers/users');
 
-  app.route('/').get(core.index);
+  app.route('/main').get(core.index);
   app.route('/dashboard').get(core.dashboard);
 };

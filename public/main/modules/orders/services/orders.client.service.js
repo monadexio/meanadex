@@ -5,7 +5,7 @@ angular.module('orders').factory('Orders', [
   '$resource',
   function($resource) {
     return $resource(
-      'orders/:orderId',
+      '/orders/:orderId',
       {
         orderId: '@_id'
       },

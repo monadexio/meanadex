@@ -12,7 +12,7 @@ angular.module('designer').config([
         allTshirts: [
           '$http',
           function($http) {
-            return $http.get('tshirts').then(
+            return $http.get('/tshirts').then(
               function (resp) {
                 return resp.data;
               });

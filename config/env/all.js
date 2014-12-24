@@ -19,23 +19,23 @@ module.exports = {
         js: []
       },
       css: [
-        'public/modules/**/css/*.css'
+        'public/main/modules/**/css/*.css'
       ],
       less: [
-        'public/modules/**/less/*.less'
+        'public/main/modules/**/less/*.less'
       ],
       sass: [
-        'public/modules/**/scss/*.scss'
+        'public/main/modules/**/scss/*.scss'
       ],
       js: [
         'public/main/config.js',
         'public/main/application.js',
         'public/main/modules/*/*.js',
-        'public/main/modules/*/*[!tests]*/*.js',
-        'public/modules/*/*.js',
-        'public/modules/*/*[!tests]*/*.js'
+        'public/main/modules/*/*[!tests]*/*.js'
       ],
-      tests: []
+      tests: [
+        'public/main/modules/*/tests/*.js'
+      ]
     }
   },
 
@@ -63,7 +63,9 @@ module.exports = {
         'public/dashboard/modules/*/*.js',
         'public/dashboard/modules/*/*[!tests]*/*.js'
       ],
-      tests: []
+      tests: [
+        'public/dashboard/modules/*/tests/*.js'
+      ]
     }
   },
 
@@ -121,8 +123,7 @@ module.exports = {
       js: [
       ],
       tests: [
-        'public/lib/angular-mocks/angular-mocks.js',
-        'public/modules/*/tests/*.js'
+        'public/lib/angular-mocks/angular-mocks.js'
       ]
     }
   }

@@ -6,24 +6,24 @@ module.exports = function(grunt) {
     serverViews: ['app/views/**/*.*'],
     serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
     clientViews: [
-      'public/modules/**/views/**/*.html',
+      'public/main/modules/**/views/**/*.html',
       'public/dashboard/modules/**/views/**/*.html'
     ],
     clientJS: [
       'public/js/*.js',
-      'public/modules/**/*.js',
+      'public/main/modules/**/*.js',
       'public/dashboard/modules/**/*.js'
     ],
     clientCSS: [
-      'public/modules/**/*.css',
+      'public/main/modules/**/*.css',
       'public/dashboard/modules/**/*.css'
     ],
     clientSCSS: [
-      'public/modules/**/*.scss',
+      'public/main/modules/**/*.scss',
       'public/dashboard/modules/**/*.scss'
     ],
     clientLESS: [
-      'public/modules/**/*.less',
+      'public/main/modules/**/*.less',
       'public/dashboard/modules/**/*.less'
     ],
     mochaTests: ['app/tests/**/*.js']
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         flatten: true,
-        src: ['public/modules/dashboard/fonts/*'],
+        src: ['public/dashboard/modules/dashboard/fonts/*'],
         dest: 'public/fonts',
         filter: 'isFile'
       }
@@ -185,7 +185,7 @@ module.exports = function(grunt) {
     ngconstant: {
       options: {
         name: 'constants',
-        dest: 'public/modules/core/services/constants.js',
+        dest: 'public/main/modules/core/services/constants.js',
         constants: {
           ENV: {
             stripeImage: undefined,
@@ -196,7 +196,7 @@ module.exports = function(grunt) {
       development: {
         constants: {
           ENV: {
-            stripeImage: 'https://localhost:4000/modules/core/img/brand/favicon.ico',
+            stripeImage: 'https://localhost:4000/main/modules/core/img/brand/favicon.ico',
             stripePublicKey: 'pk_test_WMSaxecz5HSTGZxlFbuxdF7B'
           }
         }
@@ -204,7 +204,7 @@ module.exports = function(grunt) {
       test: {
         constants: {
           ENV: {
-            stripeImage: 'https://localhost:4000/modules/core/img/brand/favicon.ico',
+            stripeImage: 'https://localhost:4000/main/modules/core/img/brand/favicon.ico',
             stripePublicKey: 'pk_test_WMSaxecz5HSTGZxlFbuxdF7B'
           }
         }

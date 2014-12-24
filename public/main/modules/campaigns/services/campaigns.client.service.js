@@ -4,7 +4,7 @@
 angular.module('campaigns').factory('Campaigns', [
   '$resource',
   function($resource) {
-    return $resource('campaigns/:campaignId',
+    return $resource('/campaigns/:campaignId',
       {
         campaignId: '@_id'
       },

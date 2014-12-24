@@ -5,7 +5,7 @@ angular.module('images').factory('Images', [
   '$resource',
   function($resource) {
     return $resource(
-      'images/:imageId',
+      '/images/:imageId',
       {
         imageId: '@_id'
       },
