@@ -6,11 +6,6 @@ angular.module('orders').config([
   function($stateProvider) {
     // Orders state routing
     $stateProvider.
-      state('listOrders', {
-        url: '/orders',
-        templateUrl: 'modules/orders/views/list-orders.client.view.html',
-        controller: 'OrdersController'
-      }).
       state('createOrder', {
         url: '/orders/create?campaign',
         templateUrl: 'modules/orders/views/create-order.client.view.html',

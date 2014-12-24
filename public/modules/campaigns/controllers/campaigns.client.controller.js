@@ -8,37 +8,6 @@ angular.module('campaigns').controller('CampaignsController', [
            Campaigns, $cookies, $filter, DashboardUtils, $timeout, $http) {
     $scope.authentication = Authentication;
 
-    // Remove existing Campaign
-    $scope.remove = function( campaign ) {
-      if ( campaign ) {
-        campaign.$remove();
-
-        for (var i in $scope.campaigns ) {
-          if ($scope.campaigns [i] === campaign ) {
-            $scope.campaigns.splice(i, 1);
-          }
-        }
-      } else {
-        $scope.campaign.$remove(function() {
-          $location.path('campaigns');
-        });
-      }
-    };
-
-    // Update existing Campaign
-    $scope.update = function(campaign0) {
-      var campaign = campaign0 || $scope.campaign;
-
-      campaign.$update(
-        function() {
-          // perhaps show successfully updated message
-        },
-        function(errorResponse) {
-          $scope.error = errorResponse.data.message;
-        }
-      );
-    };
-
     // Find a list of Campaigns
     $scope.find = function() {
       $scope.campaigns = Campaigns.query();
