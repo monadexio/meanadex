@@ -3,9 +3,9 @@
 // Orders controller
 angular.module('orders').controller('OrdersController', [
   '$scope', '$stateParams', '$location', 'Authentication', 'Orders',
-  '$filter', 'DashboardUtils',
+  '$filter',
   function($scope, $stateParams, $location, Authentication, Orders,
-           $filter, DashboardUtils) {
+           $filter) {
 
     $scope.authentication = Authentication;
 

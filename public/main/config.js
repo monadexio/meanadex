@@ -22,8 +22,7 @@ var ApplicationConfiguration = (
       'ngTable',
       'angular-data.DS',
       'angularFileUpload',
-      'timer',
-      'nvd3ChartDirectives'
+      'timer'
     ];
 
     // Add a new vertical module

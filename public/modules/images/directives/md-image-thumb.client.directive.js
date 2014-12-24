@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tshirts').directive('mdImageThumb', [
+angular.module('images').directive('mdImageThumb', [
   '$window', 'ImagesUtils',
   function($window, ImagesUtils) {
     return {

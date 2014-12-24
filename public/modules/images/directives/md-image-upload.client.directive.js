@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tshirts').directive('mdImageUpload', [
+angular.module('images').directive('mdImageUpload', [
   'mdCanvasService',
   function(mdCanvasService){
     return {

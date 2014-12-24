@@ -3,9 +3,9 @@
 // Campaigns controller
 angular.module('campaigns').controller('CampaignsController', [
   '$scope', '$stateParams', '$state', '$location', 'Authentication',
-  'Campaigns', '$cookies', '$filter', 'DashboardUtils', '$timeout', '$http',
+  'Campaigns', '$cookies', '$filter', '$timeout', '$http',
   function($scope, $stateParams, $state, $location, Authentication,
-           Campaigns, $cookies, $filter, DashboardUtils, $timeout, $http) {
+           Campaigns, $cookies, $filter, $timeout, $http) {
     $scope.authentication = Authentication;
 
     // Find a list of Campaigns
