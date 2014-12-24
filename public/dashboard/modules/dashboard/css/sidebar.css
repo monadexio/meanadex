@@ -1,22 +1,22 @@
 /* #592727 RED */
 /* #2f5927 GREEN */
 /* #30426a BLUE (default)*/
-/* Sidebar header and footer color */
 /* Sidebar background color */
+/* Sidebar header and footer color */
 /* Sidebar title text colour */
 /* Sidebar menu item hover color */
 /**
  * Sidebar
  */
 .sidebar-wrapper {
-  background: #f7f7f7;
+  background: #30426a;
 }
 ul.sidebar .sidebar-main a,
 .sidebar-footer,
 ul.sidebar .sidebar-list a:hover,
 .page-wrapper:not(.open) ul.sidebar .sidebar-title.separator {
   /* Sidebar header and footer color */
-  background: #ffffff;
+  background: #2d3e63;
 }
 ul.sidebar {
   position: absolute;
@@ -30,14 +30,13 @@ ul.sidebar {
   overflow-y: auto;
 }
 ul.sidebar li a {
-  color: black;
+  color: #fff;
   display: block;
   float: left;
   text-decoration: none;
   width: 250px;
 }
 ul.sidebar .sidebar-main {
-  border-bottom: 2px dashed lightgray;
   height: 65px;
 }
 ul.sidebar .sidebar-main a {
@@ -54,7 +53,7 @@ ul.sidebar .sidebar-main .menu-icon {
   line-height: 60px;
 }
 ul.sidebar .sidebar-title {
-  color: #2b2b2b;
+  color: #738bc0;
   font-size: 12px;
   height: 35px;
   line-height: 40px;
@@ -67,11 +66,11 @@ ul.sidebar .sidebar-list {
 ul.sidebar .sidebar-list a {
   text-indent: 25px;
   font-size: 15px;
-  color: black;
+  color: #b2bfdc;
   line-height: 40px;
 }
 ul.sidebar .sidebar-list a:hover {
-  color: grey;
+  color: #fff;
   border-left: 3px solid #e99d1a;
   text-indent: 22px;
 }
@@ -98,15 +97,15 @@ ul.sidebar .sidebar-list .menu-icon {
   margin: 13px 0;
 }
 .page-wrapper:not(.open) ul.sidebar .sidebar-list a:hover span {
+  border-left: 3px solid #e99d1a;
   text-indent: 22px;
 }
 .page-wrapper:not(.open) .sidebar-footer {
   display: none;
 }
 .sidebar-footer {
-  border-top: 2px dashed lightgray;
   position: absolute;
-  height: 140px;
+  height: 90px;
   bottom: 0;
   width: 100%;
   padding: 0;
@@ -115,11 +114,11 @@ ul.sidebar .sidebar-list .menu-icon {
   text-align: center;
 }
 .sidebar-footer div a {
-  color: black;
+  color: #b2bfdc;
   font-size: 12px;
   line-height: 43px;
 }
 .sidebar-footer div a:hover {
-  color: grey;
+  color: #ffffff;
   text-decoration: none;
 }

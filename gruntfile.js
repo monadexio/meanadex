@@ -5,11 +5,27 @@ module.exports = function(grunt) {
   var watchFiles = {
     serverViews: ['app/views/**/*.*'],
     serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
-    clientViews: ['public/modules/**/views/**/*.html'],
-    clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
-    clientCSS: ['public/modules/**/*.css'],
-    clientSCSS: ['public/modules/**/*.scss'],
-    clientLESS: ['public/modules/**/*.less'],
+    clientViews: [
+      'public/modules/**/views/**/*.html',
+      'public/dashboard/modules/**/views/**/*.html'
+    ],
+    clientJS: [
+      'public/js/*.js',
+      'public/modules/**/*.js',
+      'public/dashboard/modules/**/*.js'
+    ],
+    clientCSS: [
+      'public/modules/**/*.css',
+      'public/dashboard/modules/**/*.css'
+    ],
+    clientSCSS: [
+      'public/modules/**/*.scss',
+      'public/dashboard/modules/**/*.scss'
+    ],
+    clientLESS: [
+      'public/modules/**/*.less',
+      'public/dashboard/modules/**/*.less'
+    ],
     mochaTests: ['app/tests/**/*.js']
   };
 
