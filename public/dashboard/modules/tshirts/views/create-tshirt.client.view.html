@@ -1,0 +1,113 @@
+<div class="row alerts-container"
+     data-ng-controller="DashboardAlertController"
+     data-ng-show="error">
+  <div class="col-xs-12">
+    <alert type="danger">
+      {{error}}
+    </alert>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-circle-o-notch"
+                               title="New Tshirt">
+        <span>
+          <a data-ng-click="create()" class="btn btn-info btn-sm">
+            Submit
+          </a>
+        </span>
+      </dashboard-widget-header>
+    </dashboard-widget>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-file-image-o" title="Front image">
+      </dashboard-widget-header>
+      <dashboard-widget-body>
+        <div class="row">
+          <md-image-upload uploader="frontUploader"
+                           current-queue-item="currentQueueItemFront"
+                           display-upload="false">
+          </md-image-upload>
+        </div>
+      </dashboard-widget-body>
+    </dashboard-widget>
+  </div>
+  <div class="col-lg-6">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-file-image-o" title="Back image">
+      </dashboard-widget-header>
+      <dashboard-widget-body>
+        <div class="row">
+          <md-image-upload uploader="backUploader"
+                           current-queue-item="currentQueueItemBack"
+                           display-upload="false">
+          </md-image-upload>
+        </div>
+      </dashboard-widget-body>
+    </dashboard-widget>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-file-image-o" title="Tshirt details">
+      </dashboard-widget-header>
+      <dashboard-widget-body>
+        <div class="table-responsive" data-ng-init="createOne()">
+          <table class="table table-striped">
+            <tr>
+              <td>Tshirt name</td>
+              <td>Variant name</td>
+              <td>Variant description</td>
+              <td>Base cost</td>
+              <td>Currency</td>
+              <td>Color</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" data-ng-model="tmpTshirt.name" id="tshirtName"
+                       class="form-control" placeholder="Tshirt Name" required>
+              </td>
+              <td>
+                <input type="text" data-ng-model="tmpVariant.name" id="variantName"
+                       class="form-control" placeholder="Variant Name" required>
+              </td>
+              <td>
+                <input type="text" data-ng-model="tmpVariant.description" id="description"
+                       class="form-control" placeholder="Variant Description" required>
+              </td>
+              <td>
+                <input type="text" data-ng-model="tmpVariant.baseCost" id="baseCost"
+                       class="form-control" placeholder="0" required>
+              </td>
+              <td>
+                <input type="text" data-ng-model="tmpVariant.currency" id="currency"
+                       class="form-control" placeholder="SEK" required>
+              </td>
+              <td>
+                <md-tshirt-color-editor variant="tmpVariant"
+                                        removecolor="removeVariantColor"
+                                        addcolor="addVariantColor">
+                </md-tshirt-color-editor>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a data-ng-click="create()" class="btn btn-info btn-sm">
+                  Submit
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </dashboard-widget-body>
+    </dashboard-widget>
+  </div>
+</div>

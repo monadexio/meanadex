@@ -1,0 +1,146 @@
+<div data-ng-init="loadAllVariantsInTableData()" class="row">
+  <div class="col-lg-12">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-circle-o-notch" title="{{tshirt.name}}">
+        <a ui-sref="dashboard.tshirtCreate" type="button" class="btn btn-sm btn-info">
+          Add Tshirt
+          <i class="glyphicon glyphicon-white"></i>
+        </a>
+      </dashboard-widget-header>
+    </dashboard-widget>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-file-image-o" title="Front image">
+        <a class="btn btn-info btn-sm"
+           data-ng-click="onFrontImgEdit()"
+           data-ng-if="!tshirt.editFrontImg">
+          <span class="glyphicon glyphicon-edit"></span>
+          edit
+        </a>
+      </dashboard-widget-header>
+      <dashboard-widget-body>
+        <div data-ng-if="tshirt.editFrontImg" class="row">
+          <md-image-upload uploader="frontUploader"
+                           current-queue-item="currentQueueItemFront"
+                           on-image-upload="onFrontImgUpload()"
+                           display-upload="true">
+          </md-image-upload>
+        </div>
+        <div data-ng-if="!tshirt.editFrontImg">
+          <img id="fimage"
+               data-ng-src="{{tshirt.frontImage.url}}"
+               width="50%"/>
+        </div>
+      </dashboard-widget-body>
+    </dashboard-widget>
+  </div>
+
+  <div class="col-lg-6">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-file-image-o" title="Back image">
+        <a class="btn btn-info btn-sm"
+           data-ng-click="onBackImgEdit()"
+           data-ng-if="!tshirt.editBackImg">
+          <span class="glyphicon glyphicon-edit"></span>
+          edit
+        </a>
+      </dashboard-widget-header>
+      <dashboard-widget-body>
+        <div data-ng-if="tshirt.editBackImg" class="row">
+          <md-image-upload uploader="backUploader"
+                           current-queue-item="currentQueueItemBack"
+                           on-image-upload="onBackImgUpload()"
+                           display-upload="true">
+          </md-image-upload>
+        </div>
+        <div data-ng-if="!tshirt.editBackImg">
+          <img id="bimage"
+               data-ng-src="{{tshirt.backImage.url}}"
+               width="50%"/>
+        </div>
+      </dashboard-widget-body>
+    </dashboard-widget>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <dashboard-widget>
+      <dashboard-widget-header icon="fa-adjust" title="Variants">
+        <a class="btn btn-info btn-sm" data-ng-click="addTshirtVariant()">
+          New variant
+        </a>
+      </dashboard-widget-header>
+      <dashboard-widget-body>
+        <div class="table-responsive">
+          <table ng-table="variantsTableParams" show-filter="false"
+                 class="table table-bordered">
+            <tr ng-repeat="variant in $data">
+              <td data-title="'Name'">
+                <span ng-if="!variant.$edit">{{variant.name}}</span>
+                <div ng-if="variant.$edit">
+                  <input class="form-control" type="text" ng-model="variant.name" />
+                </div>
+              </td>
+              <td data-title="'Description'">
+                <span ng-if="!variant.$edit">{{variant.description}}</span>
+                <div ng-if="variant.$edit">
+                  <input class="form-control" type="text" ng-model="variant.description" />
+                </div>
+              </td>
+              <td data-title="'Base cost'">
+                <span ng-if="!variant.$edit">{{variant.baseCost}}</span>
+                <div ng-if="variant.$edit">
+                  <input class="form-control" type="text" ng-model="variant.baseCost" />
+                </div>
+              </td>
+              <td data-title="'Currency'">
+                <span ng-if="!variant.$edit">{{variant.currency}}</span>
+                <div ng-if="variant.$edit">
+                  <input class="form-control" type="text" ng-model="variant.currency" />
+                </div>
+              </td>
+              <td data-title="'Colors'">
+                <md-tshirt-color-editor variant="variant"
+                                        removecolor="removeVariantColor"
+                                        addcolor="addVariantColor">
+                </md-tshirt-color-editor>
+              </td>
+              <td data-title="'Actions'">
+                <a data-ng-if="!variant.$edit" href=""
+                   class="undecorated-link fa fa-edit fa-lg"
+                   data-ng-click="onVariantEdit(variant)"/>
+                <a ng-if="variant.$edit"
+                   class="undecorated-link fa fa-save fa-lg"
+                   data-ng-click="onVariantSave(variant)"/>
+                <a class="undecorated-link fa fa-trash-o fa-lg" data-ng-click="onVariantRemove(variant);"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div data-ng-show="error" class="text-danger">
+          <strong data-ng-bind="error"></strong>
+        </div>
+      </dashboard-widget-body>
+    </dashboard-widget>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <dashboard-widget>
+      <small>
+        <em class="text-muted">
+          Created on
+          <span data-ng-bind="tshirt.created_at | date:'mediumDate'"></span>
+          by
+          <span data-ng-bind="tshirt.user.displayName"></span>
+        </em>
+      </small>
+    </dashboard-widget>
+  </div>
+</div>
