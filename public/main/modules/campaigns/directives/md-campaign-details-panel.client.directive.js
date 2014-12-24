@@ -5,7 +5,7 @@ angular.module('campaigns').directive('mdCampaignDetailsPanel', [
   function($timeout){
     return {
       restrict: 'E',
-      templateUrl: 'modules/campaigns/views/campaign-details-panel.client.view.html',
+      templateUrl: 'main/modules/campaigns/views/campaign-details-panel.client.view.html',
       link: function(scope, element, attrs) {
         $timeout(function() {
           element.find('#campaignDetailNextStep').click(function(e) {

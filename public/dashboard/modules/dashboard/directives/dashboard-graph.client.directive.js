@@ -11,7 +11,7 @@ angular.module('dashboard').directive('dashboardGraph', [
         loadData: '&'
       },
       restrict: 'E',
-      templateUrl: 'modules/dashboard/views/dashboard-graph.client.view.html',
+      templateUrl: 'dashboard/modules/dashboard/views/dashboard-graph.client.view.html',
       link: function(scope, element, attr) {
         var paddingValues = function(values, start, end) {
           var map = _.reduce(

@@ -166,19 +166,19 @@ angular.module('designer').service('mdCanvasService', [
 
           switch(control) {
             case 'br':
-            img.src = 'modules/designer/img/tool/scale.png';
+            img.src = 'main/modules/designer/img/tool/scale.png';
             ctx.drawImage(img, left, top, sizeX, sizeY);
             break;
             case 'bl':
-            img.src = 'modules/designer/img/tool/delete.png';
+            img.src = 'main/modules/designer/img/tool/delete.png';
             ctx.drawImage(img, left, top, sizeX, sizeY);
             break;
             case 'tl':
-            img.src = 'modules/designer/img/tool/drag.png';
+            img.src = 'main/modules/designer/img/tool/drag.png';
             ctx.drawImage(img, left, top, sizeX, sizeY);
             break;
             case 'tr':
-            img.src = 'modules/designer/img/tool/rotate.png';
+            img.src = 'main/modules/designer/img/tool/rotate.png';
             ctx.drawImage(img, left, top, sizeX, sizeY);
             break;
             default:
@@ -278,7 +278,7 @@ angular.module('designer').service('mdCanvasService', [
 
     this.restoreCanvas = function() {
       // restore the canvas if possible
-      var frontImg = 'modules/designer/img/canvas/crew_front.png';
+      var frontImg = 'main/modules/designer/img/canvas/crew_front.png';
       this.renderCanvas(frontImg, this.frontCanvas);
       this.currentSide = 'front';
 
@@ -423,7 +423,7 @@ angular.module('designer').service('mdCanvasService', [
     };
 
     this.flipBack = function() {
-      var backImg = 'modules/designer/img/canvas/crew_back.png';
+      var backImg = 'main/modules/designer/img/canvas/crew_back.png';
       this.frontCanvas = JSON.stringify(canvas);
       this.renderCanvas(backImg, this.backCanvas);
       this.currentSide = 'back';

@@ -6,7 +6,7 @@ angular.module('designer').directive('mdTshirtCanvas', [
     var canvas;
     return {
       restrict: 'E',
-      templateUrl: 'modules/designer/views/canvas.client.view.html',
+      templateUrl: 'main/modules/designer/views/canvas.client.view.html',
       link: function(scope, element, attrs) {
         if(scope.campaign) {
           scope.campaign.$promise.then

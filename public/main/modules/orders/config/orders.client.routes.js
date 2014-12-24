@@ -8,12 +8,12 @@ angular.module('orders').config([
     $stateProvider.
       state('createOrder', {
         url: '/orders/create?campaign',
-        templateUrl: 'modules/orders/views/create-order.client.view.html',
+        templateUrl: 'main/modules/orders/views/create-order.client.view.html',
         controller: 'CreateOrderController'
       }).
       state('finishOrder', {
         url: '/orders/:orderId',
-        templateUrl: 'modules/orders/views/finish-order.client.view.html',
+        templateUrl: 'main/modules/orders/views/finish-order.client.view.html',
         controller: 'OrdersController'
       });
   }

@@ -5,7 +5,7 @@ angular.module('designer').directive('mdImagePage', [
   function(mdCanvasService){
     return {
       restrict: 'E',
-      templateUrl: 'modules/designer/views/image-page.client.view.html',
+      templateUrl: 'main/modules/designer/views/image-page.client.view.html',
       link: function(scope, element, attrs) {
       }
     };

@@ -11,7 +11,7 @@ angular.module('core').config([
     $stateProvider.
       state('home', {
         url: '/',
-        templateUrl: 'modules/core/views/home.client.view.html',
+        templateUrl: 'main/modules/core/views/home.client.view.html',
         controller: 'HomeController'
       });
   }

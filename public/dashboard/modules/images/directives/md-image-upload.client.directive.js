@@ -11,7 +11,7 @@ angular.module('tshirts').directive('mdImageUpload', [
         onImageUpload: '&',
         displayUpload: '='
       },
-      templateUrl: 'modules/images/views/image-upload.client.view.html',
+      templateUrl: 'dashboard/modules/images/views/image-upload.client.view.html',
       link: function(scope, element, attrs) {
       }
     };

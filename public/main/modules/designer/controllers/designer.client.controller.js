@@ -67,11 +67,11 @@ angular.module('designer').controller('DesignerController', [
     }
 
     $scope.images = [
-      {src: 'modules/designer/img/avatar/avatar-1.jpeg'},
-      {src: 'modules/designer/img/avatar/avatar-2.png'},
-      {src: 'modules/designer/img/avatar/avatar-3.png'},
-      {src: 'modules/designer/img/avatar/avatar-4.png'},
-      {src: 'modules/designer/img/avatar/avatar-5.png'}
+      {src: 'main/modules/designer/img/avatar/avatar-1.jpeg'},
+      {src: 'main/modules/designer/img/avatar/avatar-2.png'},
+      {src: 'main/modules/designer/img/avatar/avatar-3.png'},
+      {src: 'main/modules/designer/img/avatar/avatar-4.png'},
+      {src: 'main/modules/designer/img/avatar/avatar-5.png'}
     ];
 
     $scope.fonts = [

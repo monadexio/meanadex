@@ -5,7 +5,7 @@ angular.module('designer').directive('mdTextInput', [
   function($timeout, mdCanvasService){
     return {
       restrict: 'E',
-      templateUrl: 'modules/designer/views/text-input.client.view.html',
+      templateUrl: 'main/modules/designer/views/text-input.client.view.html',
       link: function(scope, element, attrs) {
         $timeout(function() {
           // FIXME: need to figure out a way to communicate the set the
