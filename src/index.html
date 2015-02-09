@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <base href="/" />
     <title>mootee</title>
 
     <!-- Google's Ajax Crawling: https://developers.google.com/webmasters/ajax-crawling -->
@@ -151,13 +152,13 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li data-ng-hide="isLoggedIn">
-                    <a href="/#!/auth/signin" class="goFromLanding">Login or Register</a>
+                    <a href="/auth/signin" class="goFromLanding">Login or Register</a>
                   </li>
                   <li data-ng-show="isLoggedIn">
-                    <a href="/#!/dashboard/front" class="click-loading">Open dashboard</a>
+                    <a href="/dashboard/front" class="click-loading">Open dashboard</a>
                   </li>
                   <li data-ng-show="isLoggedIn">
-                    <a href="/#!/auth/deauthorize">Signout</a>
+                    <a href="/auth/deauthorize">Signout</a>
                   </li>
                 </ul>
               </div><!-- End Menu -->
@@ -173,19 +174,19 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#!/landing"><span>Mootee</span></a>
+                <a class="navbar-brand" href="/landing"><span>Mootee</span></a>
               </div><!-- End Brand and Toggle -->
               <!-- Menu -->
               <div class="collapse navbar-collapse" id="navbar-collapse-main">
                 <ul class="nav navbar-nav navbar-right">
                   <li data-ng-hide="isLoggedIn">
-                    <a href="/#!/auth/signin" class="goFromLanding">Login or Register</a>
+                    <a href="/auth/signin" class="goFromLanding">Login or Register</a>
                   </li>
                   <li data-ng-show="isLoggedIn">
-                    <a href="/#!/dashboard/front" class="click-loading">Open dashboard</a>
+                    <a href="/dashboard/front" class="click-loading">Open dashboard</a>
                   </li>
                   <li data-ng-show="isLoggedIn">
-                    <a href="/#!/auth/deauthorize">Signout</a>
+                    <a href="/auth/deauthorize">Signout</a>
                   </li>
                 </ul>
               </div><!-- End Menu -->
@@ -374,7 +375,7 @@
               <div class="section-header">
                 <h2 class="section-title">Featured campaigns</h2>
                 <h3 class="section-subtitle">
-                  <a href="/#!/discover_campaigns"
+                  <a href="/discover_campaigns"
                      class="btn mootee-btn-major-reverse goFromLanding">
                     Discover more awesome campaigns!
                   </a>

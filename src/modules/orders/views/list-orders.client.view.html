@@ -23,7 +23,7 @@
                 <span>{{order.email}}</span>
               </td>
               <td data-title="'Campaign'" filter="{ 'campaign': 'text' }">
-                <a data-ng-href="#!/campaigns/{{order.campaign._id}}">{{order.campaign.name}}</a>
+                <a data-ng-href="/campaigns/{{order.campaign._id}}">{{order.campaign.name}}</a>
               </td>
               <td data-title="'Created at'">
                 <span>{{order.created | date:'medium'}}</span>
