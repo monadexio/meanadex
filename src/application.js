@@ -77,13 +77,13 @@ angular.element(document).ready(function() {
   }
 
   $log.info('Attempting to load parameters from ./config.json');
-  $http.get('./config.json').then(
-    function (response) {
-      initializeApplication(response.data);
-    },
-    function () {
-      $log.warn('Cannot load ./config.json, using defaults.');
-      initializeApplication({});
-    }
-  );
+  //$http.get('./config.json').then(
+  //  function (response) {
+  //    initializeApplication({});
+  //  },
+  //  function () {
+  //    $log.warn('Cannot load ./config.json, using defaults.');
+  //    initializeApplication({});
+  //  }
+  //);
 });
