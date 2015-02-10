@@ -76,7 +76,8 @@ angular.element(document).ready(function() {
       [ApplicationConfiguration.applicationModuleName]);
   }
 
-  $log.info('Attempting to load parameters from ./config.json');
+  initializeApplication({});
+  //$log.info('Attempting to load parameters from ./config.json');
   //$http.get('./config.json').then(
   //  function (response) {
   //    initializeApplication({});
