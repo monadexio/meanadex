@@ -8,7 +8,7 @@ angular.module(ApplicationConfiguration.applicationModuleName,
 angular.module(ApplicationConfiguration.applicationModuleName).config(
   [ '$locationProvider',
     function($locationProvider) {
-      $locationProvider.hashPrefix('!');
+      $locationProvider.html5Mode(true).hashPrefix('!');
     }
   ]
 );
@@ -76,14 +76,15 @@ angular.element(document).ready(function() {
       [ApplicationConfiguration.applicationModuleName]);
   }
 
-  $log.info('Attempting to load parameters from ./config.json');
-  $http.get('./config.json').then(
-    function (response) {
-      initializeApplication(response.data);
-    },
-    function () {
-      $log.warn('Cannot load ./config.json, using defaults.');
-      initializeApplication({});
-    }
-  );
+  initializeApplication({});
+  //$log.info('Attempting to load parameters from ./config.json');
+  //$http.get('./config.json').then(
+  //  function (response) {
+  //    initializeApplication({});
+  //  },
+  //  function () {
+  //    $log.warn('Cannot load ./config.json, using defaults.');
+  //    initializeApplication({});
+  //  }
+  //);
 });

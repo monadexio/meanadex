@@ -2,7 +2,7 @@
  * URL and location manipulation utilities.
  *
  */
-angular.module('util').factory('UrlUtil', ['$window', 
+angular.module('util').factory('UrlUtil', ['$window',
   function ($window) {
     'use strict';
 
@@ -22,7 +22,7 @@ angular.module('util').factory('UrlUtil', ['$window',
        * fragment.
        */
       buildApplicationUrl: function (fragment) {
-        return this.getFullUrlPrefix() + '#!' + fragment;
+        return this.getFullUrlPrefix() + fragment;
       },
 
       /**

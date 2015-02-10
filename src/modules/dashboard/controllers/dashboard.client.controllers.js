@@ -65,11 +65,11 @@ angular.module('dashboard').controller('DashboardController', [
     $scope.userDropdown = [
       {
         text: 'Go to designer',
-        href: '/#!/'
+        href: '/'
       },
       {
         text: 'Signout',
-        href: '#!/auth/deauthorize'
+        href: '/auth/deauthorize'
       }
     ];
   }

@@ -120,11 +120,10 @@ module.exports = function(db) {
     });
   });
 
-  // Assume 404 since no middleware responded
+  // Assume 404, then display index.html
   app.use(function(req, res) {
-    res.status(404).send({
-      url: req.originalUrl,
-      error: 'Not Found'
+    res.sendfile('index.html', {
+      root: path.resolve('./public')
     });
   });
 
